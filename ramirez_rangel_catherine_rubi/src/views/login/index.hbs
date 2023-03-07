@@ -1,0 +1,40 @@
+<html>
+
+
+<div ALIGN="center" class = "formulario">
+  <strong>
+  <h2> Login </h2>
+  </strong>
+<br>
+
+  <body>
+    <label for="email"><strong>Correo Electronico: </strong></label>
+
+    <input type="email" id="email" pattern=".+@globex\.com" size="30" required>
+    <br>
+    
+    <p>
+    <br>
+<script type="text/javascript">
+        function mostrarPassword(){
+                var cambio = document.getElementById("txtPassword");
+                if(cambio.type == "password"){
+                    cambio.type = "text";
+                    $('.icon').removeClass('fa fa-eye-slash').addClass('fa fa-eye');
+                }else{
+                    cambio.type = "password";
+                    $('.icon').removeClass('fa fa-eye').addClass('fa fa-eye-slash');
+                }
+                } 
+    
+                $(document).ready(function () {
+                //CheckBox mostrar contraseña
+                $('#ShowPassword').click(function () {
+                    $('#Password').attr('type', $(this).is(':checked') ? 'text' : 'password');
+                });
+            });
+            </script>
+            <p>
+            <label><b>Contraseña:</b></label><input ID="txtPassword" type="Password" Class="form-control" placeholder=" Obligatorio*" div class="input-group-append"><button id="show_password" class="btn btn-primary" type="button" onclick="mostrarPassword()"> <span class="fa fa-eye-slash icon"></span> </button>
+            </p>
+            </div>
